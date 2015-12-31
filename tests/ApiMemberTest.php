@@ -2,7 +2,8 @@
 
 namespace Sheerwater\HMACRestfulAuthenticator\Tests;
 
-use FieldList, Member;
+use FieldList;
+use Member;
 
 class ApiMemberTest extends \SapphireTest
 {

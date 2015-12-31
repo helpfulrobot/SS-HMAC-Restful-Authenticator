@@ -2,7 +2,8 @@
 
 namespace Sheerwater\HMACRestfulAuthenticator\Models;
 
-use Member, RandomGenerator;
+use Member;
+use RandomGenerator;
 
 /**
  * Class ApiKeyPair
@@ -92,4 +93,4 @@ class ApiKeyPair extends \DataObject
             }
         }
     }
-} 
+}

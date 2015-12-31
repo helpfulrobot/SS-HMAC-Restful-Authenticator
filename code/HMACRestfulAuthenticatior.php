@@ -3,7 +3,11 @@
 namespace Sheerwater\HMACRestfulAuthenticator;
 
 use Sheerwater\HMACRestfulAuthenticator\Models\ApiKeyPair;
-use Config, Controller, DateInterval, DateTime, SS_HTTPRequest;
+use Config;
+use Controller;
+use DateInterval;
+use DateTime;
+use SS_HTTPRequest;
 
 class HMACRestfulAuthenticator
 {
@@ -141,7 +145,7 @@ class HMACRestfulAuthenticator
      *
      * @return string[]
      */
-    private static function getCanonicalHeaders(Array $headers)
+    private static function getCanonicalHeaders(array $headers)
     {
         $out       = [];
         $prefix    = self::getHeaderPrefix();
@@ -185,7 +189,7 @@ class HMACRestfulAuthenticator
      *
      * @return string
      */
-    private static function implodeHeaders(Array $headers, $glue = ': ', $separator = "\n")
+    private static function implodeHeaders(array $headers, $glue = ': ', $separator = "\n")
     {
         $out = [];
         foreach ($headers as $k => $v) {

@@ -4,7 +4,13 @@ namespace Sheerwater\HMACRestfulAuthenticator\Tests;
 
 use Sheerwater\HMACRestfulAuthenticator\Models\ApiKeyPair;
 use Sheerwater\HMACRestfulAuthenticator\HMACRestfulAuthenticator;
-use Config, Controller, Director, SS_HTTPRequest, DataObject, TestOnly, Member;
+use Config;
+use Controller;
+use Director;
+use SS_HTTPRequest;
+use DataObject;
+use TestOnly;
+use Member;
 use ReflectionMethod;
 
 class HMACRestfulAuthenticatorTest extends \SapphireTest
@@ -326,7 +332,7 @@ class TestApiObject extends DataObject implements TestOnly
     private static $db = array(
         'Title' => 'Varchar'
     );
-    static $api_access = true;
+    public static $api_access = true;
 
     public function canRead($member = null)
     {
